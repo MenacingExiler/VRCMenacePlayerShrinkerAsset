@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.14">
+  <diagram name="Page-1" id="gS_-IfwnYNGdVeXv-gYv">
+    <mxGraphModel dx="1687" dy="908" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sh82t368K7-UF68XpIcC-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sh82t368K7-UF68XpIcC-1" target="sh82t368K7-UF68XpIcC-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;I want to shrink player&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-6" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Yes&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sh82t368K7-UF68XpIcC-3" target="sh82t368K7-UF68XpIcC-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="360" />
+              <mxPoint x="980" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-9" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;No&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sh82t368K7-UF68XpIcC-3" target="sh82t368K7-UF68XpIcC-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="400" />
+              <mxPoint x="980" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-3" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Do you want it to shrink to specific amount?&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="320" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sh82t368K7-UF68XpIcC-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1420" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-5" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Enable Fixed mode&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="200" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="sh82t368K7-UF68XpIcC-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1420" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-8" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Disable Fixed mode&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="440" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-10" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Do you want instant shrink?&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="sh82t368K7-UF68XpIcC-13" target="sh82t368K7-UF68XpIcC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-13" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Set shrink time to 0&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="200" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sh82t368K7-UF68XpIcC-14" target="sh82t368K7-UF68XpIcC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-14" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Set shrink time to amount you need.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="440" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-15" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Yes&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="360" as="sourcePoint" />
+            <mxPoint x="400" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="360" />
+              <mxPoint x="340" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sh82t368K7-UF68XpIcC-16" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;No&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="400" as="sourcePoint" />
+            <mxPoint x="400" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="400" />
+              <mxPoint x="340" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
