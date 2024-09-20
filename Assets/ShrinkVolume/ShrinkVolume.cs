@@ -9,14 +9,11 @@ using VRC.Udon;
 public class ShrinkVolume : UdonSharpBehaviour
 {
     [Space]
-    [Header("How to use this script")]
-    [Space]
-    [Header("The following script will shrink the player's eye height depending on what variable ")]
-    [Header("you set, at length of time you set.")]
+    [Header("Hover your mouse on variables for more info.")]
     [Space]
     
-    [Header("Shrink time: The time it takes for the player to shrink from start to finish. Eg. 1.0 will")]
-    [Header("take 1 second for player to shrink from current height to target height.")]
+    [Header("Shrink time")]
+    [Tooltip("Shrink time: The time it takes for the player to shrink from start to finish. Eg. 1.0 will take 1 second for player to shrink from current height to target height.")]
     //shrink time
     public float shrinkTime;
     [Space]
@@ -26,22 +23,25 @@ public class ShrinkVolume : UdonSharpBehaviour
     
     //Shrink mode
     public bool fixedHeightMode;
+    [FormerlySerializedAs("fixedHeightDecrease")]
     [Space]
-    [Header("Fixed height mode: Decrease player height by fixed amount.")]
-    [Header("This means all player, no matter how tall they are, will be shrink by the same amount when triggered.")]
+    [Header("Fixed height mode")]
+    [Tooltip("Modify player height by fixed amount. This means all player, no matter how tall they are, will resize by the same amount when triggered.")]
     //Fixed height decrease
-    public float fixedHeightDecrease;
-    [FormerlySerializedAs("heightDecrease")]
-    [Space]
-    [Header("Height mode: Change player height by percentage (%) even in negative.")]
+    public float fixedHeightModify;
+    
+    [Header("Height mode")]
+    [Tooltip("Change player height by percentage (%) even in negative.")]
     //Height multiplier
     public float heightMultiplier;
+    [Tooltip("Minimum height of player. Please keep in mind that VRChat have a minimum of 0.2m. Do not cross this limit! Script will automatically set to minimum if it's less than 0.2m.")]
     //Minimum height of player
     public float minHeight;
+    [Tooltip("Maximum height of player. Please keep in mind that VRChat have a maximum of 5m. Do not cross this limit! Script will automatically set to maximum if it's more than 5m.")]
     //Maximum height of player
     public float maxHeight;
-
-
+    
+    
     
     private bool intervalMode = false;
     private bool intervalModeUnshrink = false;
@@ -54,6 +54,16 @@ public class ShrinkVolume : UdonSharpBehaviour
     {
         //get local player
         localPlayer = Networking.LocalPlayer;
+        
+        //If minmax is crossed to limit, set it to limit 
+        if (minHeight < 0.2f)
+        {
+            minHeight = 0.2f;
+        }
+        if (maxHeight > 5f)
+        {
+            maxHeight = 5f;
+        }
     }
     
     //Player enter trigger
@@ -71,7 +81,7 @@ public class ShrinkVolume : UdonSharpBehaviour
                 intervalMode = true;
                 //Set all temp for interval mode
                 originHeightTemp = player.GetAvatarEyeHeightAsMeters();
-                targetHeightTemp = fixedHeightDecrease;
+                targetHeightTemp = fixedHeightModify;
                 totalShrinkTime = shrinkTime;
                 shrinkTimeElapsed = 0;
             
@@ -97,7 +107,7 @@ public class ShrinkVolume : UdonSharpBehaviour
     public void FixedHeightMode()
     {
         //Decrease player height to fixed height
-        localPlayer.SetAvatarEyeHeightByMeters(fixedHeightDecrease);
+        localPlayer.SetAvatarEyeHeightByMeters(fixedHeightModify);
     }
     
     //Player changes avatar

@@ -544,8 +544,8 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 1927362213}
   shrinkTime: 5
-  fixedHeightMode: 1
-  fixedHeightDecrease: 0.5
+  fixedHeightMode: 0
+  fixedHeightModify: 0.5
   heightMultiplier: -0.5
   minHeight: 0.5
   maxHeight: 1.5
