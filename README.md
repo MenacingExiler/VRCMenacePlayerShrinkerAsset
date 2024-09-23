@@ -2,9 +2,12 @@
  
 Advanced Player Shrinking asset for VRChat World Creations.
 
-This asset is made with Vket booth compatibility in mind. Coding practice are made to comply and to be compatible with VRChat ToS and Vket ToS.
+This asset is made with Vket booth compatibility in mind. Coding practice are made to comply and to be compatible with VRChat ToS and Vket ToS. This means you can compile to both Vket booth version and non-Vket without breaking compatibility.
 
 The asset includes example scene with a shrink volume.
+
+![2024-09-23 12-02-58](https://github.com/user-attachments/assets/76201341-2dfc-4d41-92cd-48a4aecb0fd0)
+
 
 ## Features
 
