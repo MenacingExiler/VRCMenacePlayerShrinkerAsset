@@ -51,3 +51,7 @@ To turn any object into trigger like a cube, drag the shrink script to an object
 # License
 
 This asset is licensed under Apache License 2.0. Feel free to contribute or include in your project as long as you follow the license.
+
+# Support me!
+
+If you like what I made and would like to support me, I would appreciate if you can! ko-fi.com/menacingexiler
