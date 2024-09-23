@@ -40,7 +40,7 @@ Example: If you set it to 0.5, Player will shrink from current height to 50cm.
 
 Scale player height based on percentage. Additionally, you can also set minimum height and maximum height player is allowed to srhink to and will cap when player height result crossing the limit.
 
-Example: If you want player height to decrease by 50% but not lower than 30cm or higher than 70cm.
+Example: If you want player height to decrease by 50% but not lower than 0.5m or higher than 1.5m.
 
 ## How to use?
 
