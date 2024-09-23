@@ -48,6 +48,6 @@ You can either use premade shrink cube or apply script to any object with collid
 
 To turn any object into trigger like a cube, drag the shrink script to an object. Remmeber to have collider in the object. Any collider can do as long it has Trigger enabled.
 
-
+# License
 
 This asset is licensed under Apache License 2.0. Feel free to contribute or include in your project as long as you follow the license.
