@@ -8,6 +8,7 @@ The asset includes example scene with a shrink volume.
 
 ![2024-09-23 12-02-58](https://github.com/user-attachments/assets/76201341-2dfc-4d41-92cd-48a4aecb0fd0)
 
+Download: https://github.com/MenacingExiler/VRCMenacePlayerShrinkerAsset/releases/download/Alpha/MenacePlayerShrinkerAsset_Pre-release.0.1.0-alpha.unitypackage
 
 ## Features
 
