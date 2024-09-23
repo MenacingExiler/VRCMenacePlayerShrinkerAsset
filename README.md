@@ -1,4 +1,4 @@
-# VRCMenacePlayerShrinkerAsset
+# Menace's Shrinker Asset
  
 Advanced Player Shrinking asset for VRChat World Creations.
 
@@ -52,6 +52,7 @@ To turn any object into trigger like a cube, drag the shrink script to an object
 # License
 
 This asset is licensed under Apache License 2.0. Feel free to contribute or include in your project as long as you follow the license.
+If you use it in your world or Vket booth, please credit me MenacingExiler with link to github.com/MenacingExiler/VRCMenacePlayerShrinkerAsset
 
 # Support me!
 
