@@ -51,12 +51,12 @@ public class ShrinkVolume : UdonSharpBehaviour
     private float originalPlayerHeight;
 
     [Header("Debug features and misc")]
-    [SerializeField] private bool removeMesh = true;
+    [SerializeField] private bool enableMesh = false;
 
     private void Start()
     {
         //mesh renderer
-        GetComponent<MeshRenderer>().enabled = removeMesh;
+        GetComponent<MeshRenderer>().enabled = enableMesh;
         
         //get local player
         localPlayer = Networking.LocalPlayer;
