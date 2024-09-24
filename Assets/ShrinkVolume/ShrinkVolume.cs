@@ -1,6 +1,7 @@
 ﻿
 using System;
 using UdonSharp;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 using VRC.SDKBase;
@@ -11,6 +12,20 @@ public class ShrinkVolume : UdonSharpBehaviour
     [Space]
     [Header("Hover your mouse on variables for more info.")]
     [Space]
+    
+    //Target walk speed
+    public float targetWalkSpeed;
+    //Target sprint speed
+    public float targetSprintSpeed;
+    //Target strafe speed
+    public float targetStrafeSpeed;
+    //Target jump impulse
+    public float targetJumpImpulse;
+    //Player originals
+    private float originalWalkSpeed;
+    private float originalSprintSpeed;
+    private float originalStrafeSpeed;
+    private float originalJumpImpulse;
     
     [Header("Shrink time")]
     [Tooltip("Shrink time: The time it takes for the player to shrink from start to finish. Eg. 1.0 will take 1 second for player to shrink from current height to target height.")]
@@ -106,6 +121,23 @@ public class ShrinkVolume : UdonSharpBehaviour
                 
                 FixedHeightMode();
             }
+            
+            //return if any of the properties are null
+            if (targetWalkSpeed == 0 || targetSprintSpeed == 0 || targetStrafeSpeed == 0 || targetJumpImpulse == 0)
+            {
+                return;
+            }
+            
+            //Get player original properties
+            originalWalkSpeed = player.GetWalkSpeed();
+            originalSprintSpeed = player.GetRunSpeed();
+            originalStrafeSpeed = player.GetStrafeSpeed();
+            originalJumpImpulse = player.GetJumpImpulse();
+            //Set player properties
+            player.SetWalkSpeed(targetWalkSpeed);
+            player.SetRunSpeed(targetSprintSpeed);
+            player.SetStrafeSpeed(targetStrafeSpeed);
+            player.SetJumpImpulse(targetJumpImpulse);
         }
     }
     
@@ -134,6 +166,18 @@ public class ShrinkVolume : UdonSharpBehaviour
             {
                 FixedHeightMode();
             }
+            
+            //return if any of the properties are null
+            if (targetWalkSpeed == 0 || targetSprintSpeed == 0 || targetStrafeSpeed == 0 || targetJumpImpulse == 0)
+            {
+                return;
+            }
+            
+            //restore player properties
+            player.SetWalkSpeed(originalWalkSpeed);
+            player.SetRunSpeed(originalSprintSpeed);
+            player.SetStrafeSpeed(originalStrafeSpeed);
+            player.SetJumpImpulse(originalJumpImpulse);
         }
     }
     
@@ -231,5 +275,6 @@ public class ShrinkVolume : UdonSharpBehaviour
             intervalModeUnshrink = false;
         }
     }
+    
     
 }
