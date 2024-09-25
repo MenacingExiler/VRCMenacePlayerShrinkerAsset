@@ -423,6 +423,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,
         type: 3}
+      propertyPath: enableModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,
+        type: 3}
+      propertyPath: gravityModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,
+        type: 3}
+      propertyPath: targetWalkSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,
+        type: 3}
+      propertyPath: targetJumpImpulse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,
+        type: 3}
+      propertyPath: targetSprintSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,
+        type: 3}
+      propertyPath: targetStrafeSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 3426459391489276054, guid: 76e02f0e24fb8aa47a9bfb28f85731bd,

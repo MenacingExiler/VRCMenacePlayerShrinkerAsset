@@ -13,6 +13,8 @@ public class ShrinkVolume : UdonSharpBehaviour
     [Header("Hover your mouse on variables for more info.")]
     [Space]
     
+    public bool enableModifier = false;
+    
     //Target walk speed
     public float targetWalkSpeed;
     //Target sprint speed
@@ -21,11 +23,14 @@ public class ShrinkVolume : UdonSharpBehaviour
     public float targetStrafeSpeed;
     //Target jump impulse
     public float targetJumpImpulse;
+    //Gravity modifier
+    public float gravityModifier;
     //Player originals
     private float originalWalkSpeed;
     private float originalSprintSpeed;
     private float originalStrafeSpeed;
     private float originalJumpImpulse;
+    private float originalGravityModifier;
     
     [Header("Shrink time")]
     [Tooltip("Shrink time: The time it takes for the player to shrink from start to finish. Eg. 1.0 will take 1 second for player to shrink from current height to target height.")]
@@ -85,6 +90,13 @@ public class ShrinkVolume : UdonSharpBehaviour
         {
             maxHeight = 5f;
         }
+        
+        //get player original properties
+        originalWalkSpeed = localPlayer.GetWalkSpeed();
+        originalSprintSpeed = localPlayer.GetRunSpeed();
+        originalStrafeSpeed = localPlayer.GetStrafeSpeed();
+        originalJumpImpulse = localPlayer.GetJumpImpulse();
+        originalGravityModifier = localPlayer.GetGravityStrength();
     }
     
     //Player enter trigger
@@ -128,16 +140,24 @@ public class ShrinkVolume : UdonSharpBehaviour
                 return;
             }
             
+            //return if modifier is disabled
+            if (!enableModifier)
+            {
+                return;
+            }
+            
             //Get player original properties
             originalWalkSpeed = player.GetWalkSpeed();
             originalSprintSpeed = player.GetRunSpeed();
             originalStrafeSpeed = player.GetStrafeSpeed();
             originalJumpImpulse = player.GetJumpImpulse();
+            originalGravityModifier = player.GetGravityStrength();
             //Set player properties
             player.SetWalkSpeed(targetWalkSpeed);
             player.SetRunSpeed(targetSprintSpeed);
             player.SetStrafeSpeed(targetStrafeSpeed);
             player.SetJumpImpulse(targetJumpImpulse);
+            player.SetGravityStrength(gravityModifier);
         }
     }
     
@@ -173,11 +193,18 @@ public class ShrinkVolume : UdonSharpBehaviour
                 return;
             }
             
+            //return if modifier is disabled
+            if (!enableModifier)
+            {
+                return;
+            }
+            
             //restore player properties
             player.SetWalkSpeed(originalWalkSpeed);
             player.SetRunSpeed(originalSprintSpeed);
             player.SetStrafeSpeed(originalStrafeSpeed);
             player.SetJumpImpulse(originalJumpImpulse);
+            player.SetGravityStrength(originalGravityModifier);
         }
     }
     
@@ -209,6 +236,13 @@ public class ShrinkVolume : UdonSharpBehaviour
                 //Set player eye height to original height
                 localPlayer.SetAvatarEyeHeightByMeters(originalPlayerHeight);
             }
+            
+            //restore player modifier properties
+            player.SetWalkSpeed(originalWalkSpeed);
+            player.SetRunSpeed(originalSprintSpeed);
+            player.SetStrafeSpeed(originalStrafeSpeed);
+            player.SetJumpImpulse(originalJumpImpulse);
+            player.SetGravityStrength(originalGravityModifier);
             
             //Reset player height
             Debug.Log("Player height restored");
