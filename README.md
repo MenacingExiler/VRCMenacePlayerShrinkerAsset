@@ -12,6 +12,11 @@ Download: https://github.com/MenacingExiler/VRCMenacePlayerShrinkerAsset/release
 
 ## Features
 
+Adjust player walking, jumping and physics.
+
+![image](https://github.com/user-attachments/assets/3f22d6f8-0f82-4eed-8711-484163c3ff6a)
+
+
 Shrinks or increases player avatar size when enter a trigger volume.
 The script takes avatar changes into mind. If player changes avatar, their avatar will be immediately shrinked to determined rate adn will restore to size it was intended to.
 
