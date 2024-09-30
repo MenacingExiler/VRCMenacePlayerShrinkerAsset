@@ -48,6 +48,14 @@ Scale player height based on percentage. Additionally, you can also set minimum 
 
 Example: If you want player height to decrease by 50% but not lower than 0.5m or higher than 1.5m.
 
+### Experimental
+
+Enable Mesh: disable or enable mesh when game starts.
+Shrink rate: How ofter player gets shrinked each interval in Height mode.
+
+![image](https://github.com/user-attachments/assets/59b7cf38-2728-4a90-b1ac-d6a4096e3f68)
+
+
 ## How to use?
 
 You can either use premade shrink cube or apply script to any object with collider and trigger enabled.
