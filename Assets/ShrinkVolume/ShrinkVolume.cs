@@ -10,7 +10,7 @@ using VRC.Udon;
 public class ShrinkVolume : UdonSharpBehaviour
 {
     [Space]
-    [Header("Hover your mouse on variables for more info.")]
+    [Header("Hover your mouse on variables (when applicable) for more info.")]
     [Space]
     
     public bool enableModifier = false;
@@ -70,8 +70,10 @@ public class ShrinkVolume : UdonSharpBehaviour
     //Original player high in metre
     private float originalPlayerHeight;
 
-    [Header("Debug features and misc")]
+    [Header("Experimental and debug features")]
     [SerializeField] private bool enableMesh = false;
+    public float shrinkRate = 0.1f; //Rate how fast each interval shrink
+    [Tooltip("WARNING: May cause lag if set too low. Recommended to keep it at 0.25 or higher.")]
 
     private void Start()
     {
@@ -258,7 +260,7 @@ public class ShrinkVolume : UdonSharpBehaviour
     //Shrink time elapsed
     float shrinkTimeElapsed;
     
-    //Every 0.1 second, shrink player until target height is reached or shrink is interrupted
+    //Every defined interval rate, shrink player until target height is reached or shrink is interrupted
     public void ShrinkLerp()
     {
         //Return if interval mode is false
@@ -267,16 +269,16 @@ public class ShrinkVolume : UdonSharpBehaviour
             return;
         }
         
-        //Run shrink lerp again after 0.25 seconds as long as shrink time elapsed is less than total shrink time
+        //Run shrink lerp again after interval rate as long as shrink time elapsed is less than total shrink time
         if (shrinkTimeElapsed < totalShrinkTime)
         {
-            //Increment shrink time elapsed by 0.1 seconds
-            shrinkTimeElapsed += 0.1f;
+            //Increment shrink time elapsed by interval rate
+            shrinkTimeElapsed += shrinkRate;
             
             //Lerp player height from original height to target height
             localPlayer.SetAvatarEyeHeightByMeters(Mathf.Lerp(originHeightTemp, targetHeightTemp, shrinkTimeElapsed / totalShrinkTime));
             
-            SendCustomEventDelayedSeconds("ShrinkLerp", 0.1f);
+            SendCustomEventDelayedSeconds("ShrinkLerp", shrinkRate);
             return;
         }
         intervalMode = false;
@@ -291,16 +293,16 @@ public class ShrinkVolume : UdonSharpBehaviour
             return;
         }
         
-        //Run unshrink lerp again after 0.25 seconds as long as shrink time elapsed is less than total shrink time
+        //Run unshrink lerp again after interval rate as long as shrink time elapsed is less than total shrink time
         if (shrinkTimeElapsed < totalShrinkTime)
         {
-            //Increment shrink time elapsed by 0.1 seconds
-            shrinkTimeElapsed += 0.1f;
+            //Increment shrink time elapsed by interval rate
+            shrinkTimeElapsed += shrinkRate;
             
             //Lerp player height from target height to original height
             localPlayer.SetAvatarEyeHeightByMeters(Mathf.Lerp(originHeightTemp, targetHeightTemp, shrinkTimeElapsed / totalShrinkTime));
             
-            SendCustomEventDelayedSeconds("UnshrinkLerp", 0.1f);
+            SendCustomEventDelayedSeconds("UnshrinkLerp", shrinkRate);
         }
         else
         {
