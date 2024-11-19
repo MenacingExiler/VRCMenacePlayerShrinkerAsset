@@ -18,7 +18,7 @@ Adjust player walking, jumping and physics.
 
 
 Shrinks or increases player avatar size when enter a trigger volume.
-The script takes avatar changes into mind. If player changes avatar, their avatar will be immediately shrinked to determined rate adn will restore to size it was intended to.
+The script takes avatar changes into mind. If player changes avatar, their avatar will be immediately shrinked to determined rate and will restore to size it was intended to.
 
 ### Shrink time
 ![ShrinkTime](https://github.com/user-attachments/assets/711348e0-e10e-4e78-bf08-ea97af4a2733)
