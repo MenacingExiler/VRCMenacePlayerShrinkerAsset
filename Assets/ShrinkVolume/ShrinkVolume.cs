@@ -73,9 +73,10 @@ public class ShrinkVolume : UdonSharpBehaviour
     [Header("Experimental and debug features")]
     [SerializeField] private bool enableMesh = false;
     public float shrinkRate = 0.1f; //Rate how fast each interval shrink
-    [Tooltip("WARNING: May cause lag if set too low. Recommended to keep it at 0.25 or higher.")]
 
-    private void Start()
+    [Tooltip("WARNING: May cause lag if set too low. Recommended to keep it at 0.25 or higher.")]
+    
+    private void Initializing()
     {
         //mesh renderer
         GetComponent<MeshRenderer>().enabled = enableMesh;
@@ -107,6 +108,8 @@ public class ShrinkVolume : UdonSharpBehaviour
         //If player is local player
         if (player.isLocal)
         {
+            Initializing();
+            
             //Get player original height
             originalPlayerHeight = player.GetAvatarEyeHeightAsMeters();
             
